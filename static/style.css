@@ -1,0 +1,14 @@
+.card-slot {
+    width : 100px;
+    height : 150px;
+}
+
+img {
+    /*width: 100px;*/
+    /*height: 100px;*/
+}
+
+.container > div {
+
+    background-color: red;
+}
