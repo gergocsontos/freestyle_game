@@ -10,11 +10,16 @@ let game = {
     openCounter: 0,
     maxNum: 10,
     foundPairs: 0,
+    clock: 0,
+    hasStarted: false,
+    time: undefined,
     container: document.querySelector('.container'),
     firstPic: '',
     turnMeter: 0,
     won: function () {
-        alert('you won')
+        clearInterval(game.time)
+        const postgameText = document.querySelector('#postgame-text');
+        postgameText.textContent = 'Nice job!';
     },
     initGame: function () {
         game.pairs();
@@ -55,6 +60,7 @@ let game = {
             // let openCounter = 0
             img.addEventListener('click', function (e) {
                 if (game.isClickable) {
+                    game.clockStart();
                     if (e.target.style.opacity === '0') {
                         game.openCounter += 1;
 
@@ -64,6 +70,7 @@ let game = {
                         if (game.openCounter === 2) {
                             game.isClickable = false;
                             game.turnMeter += 1;
+                            document.querySelector('#turns').value = game.turnMeter;
                             game.openCounter = 0;
                             e.target.style.opacity = '1';
                             if (e.target.dataset.id === game.firstPic.dataset.id) {
@@ -92,8 +99,21 @@ let game = {
 
             game.container.appendChild(newDiv);
         }
+    },
+    lostGame: function () {
+        clearInterval(game.time)
+        const postgameText = document.querySelector('#postgame-text');
+        postgameText.textContent = 'Boo, you lost!'
+    },
+    clockStart: function () {
+        if (!game.hasStarted) {
+            game.time = setInterval(() => {
+                    game.hasStarted = true;
+                    game.clock++;
+                    document.querySelector('#time').value = game.clock;
+                }, 1000)
+        }
     }
-    ,
 
 // for(let i = 1; i <= 10; i++){
 //     a
