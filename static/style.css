@@ -1,14 +1,27 @@
 .card-slot {
+    background-image: url('closedcrd.png');
+    margin: 10px;
     width : 100px;
     height : 150px;
+
+}
+
+
+
+.container {
+    width: 800px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 img {
     /*width: 100px;*/
     /*height: 100px;*/
+    border-radius: 9px;
 }
 
 .container > div {
 
-    background-color: red;
+    /*background-color: red;*/
 }
