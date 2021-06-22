@@ -1,8 +1,9 @@
 .card-slot {
-    background-color: red;
+    background-image: url('closedcrd.png');
     margin: 10px;
     width : 100px;
     height : 150px;
+
 }
 
 
@@ -17,6 +18,7 @@
 img {
     /*width: 100px;*/
     /*height: 100px;*/
+    border-radius: 9px;
 }
 
 .container > div {
