@@ -1,3 +1,11 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
 .card-slot {
     background-image: url('closedcrd.png');
     margin: 10px;
