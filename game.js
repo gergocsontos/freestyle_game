@@ -39,6 +39,7 @@ function initGame() {
             newDiv.classList.add('card-slot');
             const img = document.createElement('img')
             img.src = `images/${imageIds[i]}.png`
+            img.style.visibility = 'hidden';
             img.dataset.id = imageIds[i]
             newDiv.appendChild(img)
 
