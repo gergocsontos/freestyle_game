@@ -1,8 +1,11 @@
 let game = {
     slot: document.querySelector(".card-slot"),
-    queryString: window.location.search,
-    // urlParams: new URLSearchParams(this.queryString),
-    pairs: 10, // parseInt(this.urlParams.get('cards')),
+    pairs: function() {
+        let queryString = window.location.search;
+        let urlParams = new URLSearchParams(queryString);
+        return parseInt(urlParams.get('cards'));
+    },
+    // pair: game.pairer(),
     openCounter: 0,
     maxNum: 10,
     container: document.querySelector('.container'),
