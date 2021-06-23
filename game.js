@@ -11,6 +11,14 @@ let game = {
         game.turnLimit = urlParams.get('turns');
         game.timeLimit = urlParams.get('timer');
     },
+    initGame: function () {
+        game.pairs();
+        game.timerCalculator();
+        game.turnCalculator();
+        game.divPlacer();
+        game.displayTurns();
+        game.displayTimer();
+    },
     openCounter: 0,
     maxNum: 30,
     foundPairs: 0,
@@ -29,17 +37,6 @@ let game = {
         // reload page ??
         // location.reload();
     },
-    initGame: function () {
-        game.pairs();
-        game.timerCalculator();
-        game.turnCalculator();
-        game.divPlacer();
-        game.displayTurns();
-        game.displayTimer();
-        console.log(game.timeLimit, game.turnLimit)
-    }
-
-    ,
     getNumbers: function () {
         let imageNumbers = [];
         do {
@@ -175,13 +172,6 @@ let game = {
             timerInputDiv.style.display = 'none';
         }
     }
-
-// for(let i = 1; i <= 10; i++){
-//     a
-//     slot.appendChild(image);
-// }
-// Your game can start here, but define separate functions, don't write everything in here :)
-
 }
 
 game.initGame();

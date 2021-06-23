@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Javascript Game</title>
+    <title>Forgetful Zoologists</title>
     <meta charset="UTF-8">
-    <!-- http://proger.i-forge.net/The_smallest_transparent_pixel/ -->
-    <link rel="icon" href="data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
 </head>
 <body>
+<div class="main-container">
+    <h3 id="main-title">Welcome to the Forgetful Zoologists!</h3>
+        <div class="form-container">
+            <form action="game.html" method="GET">
+                <div>
+                    <label for="cards">Card Pairs:</label><br>
+                    <input type="number" id="cards" name="cards" min="4" max="30" value="10">
+                </div>
+                <div>
+                    <label for="turns">Turn Limit:</label><br>
+                    <select type="number" id="turns" name="turns">
+                        <option value="off">Off</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="timer">Time Limit:</label><br>
+                        <select type="number" id="timer" name="timer">
+                            <option value="off">Off</option>
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                </div>
 
-<form action="game.html" method="GET">
-    <div>
-        <label for="cards">Card Pairs:</label><br>
-        <input type="number" id="cards" name="cards" min="4" max="30" value="10">
-    </div>
-    <div>
-        <label for="turns">Turn Limit:</label><br>
-        <select type="number" id="turns" name="turns">
-            <option value="off">Off</option>
-            <option value="easy">Easy</option>
-            <option value="medium">Medium</option>
-            <option value="hard">Hard</option>
-        </select>
-    </div>
-    <div>
-        <label for="timer">Time Limit:</label><br>
-            <select type="number" id="timer" name="timer">
-                <option value="off">Off</option>
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-    </div>
-
-    <input type="submit" value="Start"/>
-</form>
-
+                <input type="submit" value="Start"/>
+            </form>
+        </div>
+</div>
 </body>
 </html>

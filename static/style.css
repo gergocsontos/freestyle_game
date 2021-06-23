@@ -2,9 +2,12 @@
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    color: #5f300e;
 }
 
-
+body {
+    background-color: #93e085;
+}
 
 .card-slot {
     background-image: url('closedcrd.png');
@@ -16,6 +19,7 @@
 
 
 .main-container {
+    margin-top: 30px;
     position: relative;
     display: flex;
     /*justify-content: center;*/
@@ -31,6 +35,22 @@
     justify-content: center;
 }
 
+input {
+    /*position: relative;*/
+    /*display:flex;*/
+    /*align-content: center;*/
+    width: 50px;
+    text-align: center;
+    padding-top: 4px;
+    font-weight: bold;
+}
+
+.container-header {
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
 img {
     /*width: 100px;*/
     /*height: 100px;*/
@@ -40,4 +60,30 @@ img {
 .container > div {
 
     /*background-color: red;*/
+}
+
+.form-container {
+    width: 500px;
+    margin: 30px 0px;
+    background-color: #e7c889;
+    padding: 20px 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container {
+    width: 75%;
+    margin: 30px 0px;
+    background-color: #e3d0a8;
+    padding: 20px 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#main-title {
+    font-size: 40px;
 }
